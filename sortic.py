@@ -25,7 +25,7 @@ else:
         line = fin.readline()
         a = ft4.splitoper(line, a)
     if action == 3:
-        print('Вводите числа через "Enter", чтобы закончить введите "!"')
+        print('Вводите числа через "Enter" без пробелов, чтобы закончить введите "!"')
         while x != '!':
             x = input()
             if x != '!':
