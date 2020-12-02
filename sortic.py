@@ -33,7 +33,7 @@ else:
 print('Ответ программы с визуализацией:')
 while len(a) > 0:
     for i in range(len(a)):
-        if len(a) > 1 and a[0] < a[1]:
+        if len(a) > 1 and int(a[0]) < int(a[1]):
             ft.sa(a)
             print('exec sa')
             print("   a -", *a)
