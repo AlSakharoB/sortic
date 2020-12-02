@@ -38,13 +38,13 @@ else:
         fin = open("check_sortic_text")
         oper_line = ft4.splitoper(fin.read(), oper_line)
     if action == 3:
-        print('Вводите числа через "Enter", чтобы закончить введите "!"')
+        print('Вводите числа через "Enter" без пробелов, чтобы закончить введите "!"')
         while x != '!':
             x = input()
             if x != '!':
                 a.append(int(x))
                 c.append(int(x))
-        print('Вводите операции через "Enter", чтобы закончить введите "*"')
+        print('Вводите операции через "Enter" без пробелов, чтобы закончить введите "*"')
         while oper != '*':
             oper = input()
             if oper != '*':
