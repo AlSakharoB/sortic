@@ -16,10 +16,10 @@ str1 = ''
 str2 = ''
 x = 0
 fin1 = open("sortic_text")
-f = ft4.split(fin1.readline(), f)
+f = ft4.splitoper(fin1.readline(), f)
 if len(sys.argv) > 2:
-    a = ft4.split(sys.argv[1], a)
-    c = ft4.split(sys.argv[1], c)
+    a = ft4.splitoper(sys.argv[1], a)
+    c = ft4.splitoper(sys.argv[1], c)
     oper_line = ft4.splitoper(sys.argv[2], oper_line)
 else:
     print('Выберите способ ввода:' + '\n', '  1.Ввод строкой' + '\n', '  2.Считывание с файла')
@@ -27,8 +27,8 @@ else:
     action = int(input('Способ: '))
     if action == 1:
         str1 = input('Введите числа через пробел: ')
-        a = ft4.split(str1, a)
-        c = ft4.split(str1, c)
+        a = ft4.splitoper(str1, a)
+        c = ft4.splitoper(str1, c)
         str2 = input('Введите операции через пробел: ')
         oper_line = ft4.splitoper(str2, oper_line)
     if action == 2:

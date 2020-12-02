@@ -13,17 +13,17 @@ str1 = ''
 fin = open("sortic_text")
 fout = open("check_sortic_text", "w")
 if len(sys.argv) > 1:
-    a = ft4.split(sys.argv[1], a)
+    a = ft4.splitoper(sys.argv[1], a)
 else:
     print('Выберите способ ввода:' + '\n', '  1.Ввод строкой' + '\n', '  2.Считывание с файла')
     print('   3.Ввод до "!" знака')
     action = int(input('Способ: '))
     if action == 1:
         str1 = input('Введите числа через пробел: ')
-        a = ft4.split(str1, a)
+        a = ft4.splitoper(str1, a)
     if action == 2:
         line = fin.readline()
-        a = ft4.split(line, a)
+        a = ft4.splitoper(line, a)
     if action == 3:
         print('Вводите числа через "Enter", чтобы закончить введите "!"')
         while x != '!':
