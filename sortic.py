@@ -3,6 +3,7 @@ import pa_pb as ft1
 import ra_rb_rr as ft2
 import sys
 import split as ft4
+import cut as ft5
 
 
 a = []
@@ -40,17 +41,20 @@ while len(a) > 0:
             print("   b -", *b)
             fout.write('sa ')
         ft2.ra(a)
+        a = ft5.cut(a)
         print('exec ra')
         print("   a -", *a)
         print("   b -", *b)
         fout.write('ra ')
     ft1.pb(a, b)
+    a = ft5.cut(a)
     print('exec pb')
     print("   a -", *a)
     print("   b -", *b)
     fout.write('pb ')
 for i in range(len(b)):
     ft1.pa(b, a)
+    b = ft5.cut(b)
     print('exec pa')
     print("   a -", *a)
     print("   b -", *b)
