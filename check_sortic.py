@@ -4,6 +4,7 @@ import ra_rb_rr as ft2
 import rra_rrb_rrr as ft3
 import sys
 import split as ft4
+import cut as ft5
 
 
 b = []
@@ -17,7 +18,7 @@ str2 = ''
 x = 0
 fin1 = open("sortic_text")
 f = ft4.splitoper(fin1.readline(), f)
-if len(sys.argv) > 2:
+if ft4.ft_len(sys.argv) > 2:
     a = ft4.splitoper(sys.argv[1], a)
     c = ft4.splitoper(sys.argv[1], c)
     oper_line = ft4.splitoper(sys.argv[2], oper_line)
@@ -49,8 +50,8 @@ else:
             oper = input()
             if oper != '*':
                 oper_line.append(oper)
-for i in range(len(c) - 1):
-    for j in range(len(c) - 1 - i):
+for i in range(ft4.ft_len(c) - 1):
+    for j in range(ft4.ft_len(c) - 1 - i):
         if c[j] > c[j + 1]:
             c[j], c[j + 1] = c[j + 1], c[j]
 for i in oper_line:
@@ -58,26 +59,32 @@ for i in oper_line:
         ft.sa(a)
     if i == 'ra':
         ft2.ra(a)
+        a = ft5.cut(a)
     if i == 'pa':
         ft1.pa(b, a)
+        b = ft5.cut(b)
     if i == 'pb':
         ft1.pb(a, b)
+        a = ft5.cut(a)
     if i == 'sb':
         ft.sb(b)
     if i == 'ss':
         ft.ss(a, b)
     if i == 'rb':
         ft2.rb(b)
+        b = ft5.cut(b)
     if i == 'rr':
         ft2.rr(a, b)
+        a = ft5.cut(a)
+        b = ft5.cut(b)
     if i == 'rra':
-        ft3.rra(a)
+        a = ft3.rra(a)
     if i == 'rrb':
-        ft3.rrb(b)
+        b = ft3.rrb(b)
     if i == 'rrr':
         ft3.rrr(a, b)
 print('Ответ программы:')
-if len(sys.argv) > 2:
+if ft4.ft_len(sys.argv) > 2:
     if a == c:
         print('OK')
     else:
@@ -87,3 +94,4 @@ else:
         print("\033[32m {}" .format("OK"))
     else:
         print("\033[31m {}" .format("KO"))
+
