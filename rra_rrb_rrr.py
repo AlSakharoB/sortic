@@ -1,23 +1,31 @@
+import cut as ft5
+
+
 def ft_rev_list(mass):
-    for i in range(len(mass) - 1, -1, -1):
-        mass.append(mass.pop(i))
-    return mass
+    a = mass[len(mass) - 1::-1]
+    return a
 
 
 def rra(mass):
-    a = mass.pop()
-    mass = ft_rev_list(mass)
-    mass.append(a)
-    mass = ft_rev_list(mass)
+    if len(mass) > 0:
+        a = mass[len(mass) - 1]
+        c = []
+        c.append(a)
+        for i in mass[:len(mass) - 1:]:
+            c.append(i)
+        return c
 
 
 def rrb(mass):
-    b = mass.pop()
-    mass = ft_rev_list(mass)
-    mass.append(b)
-    mass = ft_rev_list(mass)
+    if len(mass) > 0:
+        a = mass[len(mass) - 1]
+        c = []
+        c.append(a)
+        for i in mass[:len(mass) - 1:]:
+            c.append(i)
+        return c
 
 
 def rrr(a, b):
-    rra(a)
-    rrb(b)
+    a = rra(a)
+    b = rrb(b)
