@@ -12,6 +12,7 @@ def pa(b, a):
         a = ft_rev_list(a)
         a.append(d)
         a = ft_rev_list(a)
+    return a
 
 
 def pb(a, b):
@@ -20,3 +21,4 @@ def pb(a, b):
         b = ft_rev_list(b)
         b.append(d)
         b = ft_rev_list(b)
+    return b
