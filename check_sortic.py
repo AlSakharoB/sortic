@@ -61,10 +61,10 @@ for i in oper_line:
         ft2.ra(a)
         a = ft5.cut(a)
     if i == 'pa':
-        ft1.pa(b, a)
+        a = ft1.pa(b, a)
         b = ft5.cut(b)
     if i == 'pb':
-        ft1.pb(a, b)
+        b = ft1.pb(a, b)
         a = ft5.cut(a)
     if i == 'sb':
         ft.sb(b)
@@ -83,6 +83,7 @@ for i in oper_line:
         b = ft3.rrb(b)
     if i == 'rrr':
         ft3.rrr(a, b)
+print(a,b,c)
 print('Ответ программы:')
 if ft4.ft_len(sys.argv) > 2:
     if a == c:
@@ -94,4 +95,3 @@ else:
         print("\033[32m {}" .format("OK"))
     else:
         print("\033[31m {}" .format("KO"))
-
